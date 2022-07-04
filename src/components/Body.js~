@@ -1,0 +1,13 @@
+import WriteUp from './WriteUp'
+import Button from './Button'
+
+const Body = () =>{
+	return (
+		<section className="w-full h-screen">
+			<WriteUp />	
+		</section>
+		
+	)
+}
+
+export default Body

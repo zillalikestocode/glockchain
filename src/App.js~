@@ -1,0 +1,44 @@
+import Header from './components/Header'
+import { useState } from 'react'
+import './App.css'
+import Body from './components/Body'
+import Sidebar from './components/Sidebar'
+
+function App() {
+  const [ navlinks, setNavLinks] = useState([{
+    id: 1,
+    title: "Wallet",
+	desc: "Destroy Crypto",
+	  icon: {}
+  },{
+    id: 2,
+    title: "Exchange",
+	  desc: "Professional destruction",
+	  icon: {}
+  },{
+    id: 3,
+    title: "Explorer",
+	  desc: "Live Data, Charts & Transactions",
+	  icon: {}
+  },{
+    id: 4,
+    title: "Institutional",
+	  desc: "Full-stack crypto destruction platform",
+	  icon: {}
+  }])
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	window.addEventListener("resize", ()=>{
+		setWindowWidth(window.innerWidth)
+	})
+	const [sidebar, setSidebar] = useState(false)
+
+  return (
+	  <>
+    <Header links={navlinks} width={windowWidth} sidebar={sidebar} setSidebar={setSidebar}/>
+		  <Sidebar sidebar={ sidebar }/>
+		<Body />
+	  </>
+  );
+}
+
+export default App;

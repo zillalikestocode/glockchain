@@ -1,0 +1,21 @@
+import Button from './Button'
+import { BiX  } from 'react-icons/bi'
+
+function Sidebar({ sidebar }){
+	return (
+		<div className={`${ sidebar ? "opacity-100 pointer-events-auto": "opacity-0 pointer-events-none w-0 h-0" } fixed top-0 bg-white w-screen`}>
+			<div className="flex items-center p-3 h-[4.75rem] ">
+				<div className="flex text-2xl font-bold"><h4>Glockchain<span className="font-bold text-gray-400">.com</span></h4></div>
+				<Button text={<BiX />} styles="text-2xl ml-auto"/>
+			</div>
+			<div>
+				<label htmlFor="">PRODUCTS</label>
+				<div>
+					
+				</div>
+			</div>
+		</div>
+	)
+}
+
+export default Sidebar

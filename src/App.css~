@@ -1,0 +1,28 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*{
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+nav{
+    @apply flex items-center p-3 h-[4.75rem] bg-darkBlue;
+}
+nav .logo-details{
+    @apply flex text-2xl;
+}
+nav .logo-details h4{
+    font-weight: 700;
+	@apply text-white md:p-7;
+}
+nav .logo-details h4 span{
+    @apply text-gray-400 ;
+    font-weight: 700;
+}
+.writeup-bg{
+    background: hsla(220, 48%, 14%, 1);
+    background: linear-gradient(135deg, hsla(220, 48%, 14%, 1) 27%, hsla(202, 33%, 37%, 1) 66%, hsla(101, 62%, 48%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#121d33", endColorstr="#3f667d", GradientType=1 );
+}
