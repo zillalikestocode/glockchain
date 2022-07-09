@@ -1,12 +1,18 @@
 import WriteUp from './WriteUp'
 import Button from './Button'
+import PriceSlide from './PriceSlide'
+import MoreInfo from './MoreInfo'
 
-const Body = () =>{
+
+const Body = ( { coins, navlinks}) =>{
 	return (
-		<section className="w-full h-screen">
-			<WriteUp />	
+		<section className="w-full">
+			<WriteUp />
+		<PriceSlide coins={coins}/>
+		<MoreInfo links={navlinks} />
+			<div className="p-5 zero bg-darkBlue"><p className="text-white text-xl font-semibold mt-3">From crypto to zero in minutes</p><Button text="Get Started" styles='p-3 bg-white text-sky-500 rounded-md mt-5' /></div>
 		</section>
-		
+
 	)
 }
 

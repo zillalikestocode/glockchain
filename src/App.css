@@ -39,3 +39,8 @@ nav .logo-details h4 span{
     height: 5px !important;
     border-radius: 10px !important;
 }
+.zero {
+	background-image: url('./images/banner.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
