@@ -34,7 +34,7 @@ const MoreInfo = ({links}) => {
                     { link.moreInfo.details && link.moreInfo.details.map((item) => {
                       return (
                         <SwiperSlide key={item.id}>
-							<div className=" py-10 slides"><img src={item.img} style={{objectFit: 'contain', width: '90vw', height: '430px'}} alt="" /></div>
+							<div className=" py-10 slides"><img src={item.img} style={{objectFit: 'contain', width: '90vw', height: '380px'}} alt="" /></div>
                           <div>
                             <h4 className="text-lg font-medium p-4">{item.info}</h4>
 							  {item.extraInfo && <p className='p-4 pt-2'>{item.extraInfo}</p>}
@@ -50,8 +50,8 @@ const MoreInfo = ({links}) => {
                     	<div className="!w-28 !flex slider !ml-auto !justify-between"></div>
 					  </div>
                   </Swiper>}
-				  <div className="p-4" style={{ backgroundImage: `url(${link.moreInfo.bgImg})`, objectFit: 'contain',  }}>
-					 {link.moreInfo.info && <div className="p-4" ><p className="text-md">{link.moreInfo.info}</p></div>}
+				  <div className="p-4" style={link.moreInfo.info && { backgroundImage: `url(${link.moreInfo.bgImg})`, objectFit: 'contain',  }}>
+					 {link.moreInfo.info && <div className="pb-4" ><p className="text-md">{link.moreInfo.info}</p></div>}
 					<Button text={link.moreInfo.btnText} styles={` p-4 ${link.theme} rounded-lg text-white`}/>
 				  </div>
 				  

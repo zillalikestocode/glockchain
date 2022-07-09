@@ -41,6 +41,6 @@ nav .logo-details h4 span{
 }
 .zero {
 	background-image: url('./images/banner.svg');
-	background-size: 100% 100%;
+	background-position: center;
 	background-repeat: no-repeat;
 }
