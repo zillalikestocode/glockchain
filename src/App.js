@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import './App.css'
 import Body from './components/Body'
@@ -195,6 +196,11 @@ function App() {
     <Header links={navlinks} width={windowWidth} sidebar={sidebar} setSidebar={setSidebar}/>
 	  { sidebar && <Sidebar sidebar={ sidebar } setSidebar={ setSidebar} links={navlinks}/>}
 		<Body coins={coins} navlinks={navlinks}/>
+		  <AnimatePresence
+		  initial={false}
+		  exitBeforeStart={true}
+			  onExitComplete={() => null}>
+		  </AnimatePresence>
 	  </>
   );
 }

@@ -10,7 +10,7 @@ const Body = ( { coins, navlinks}) =>{
 			<WriteUp />
 		<PriceSlide coins={coins}/>
 		<MoreInfo links={navlinks} />
-			<div className="p-5 zero bg-darkBlue"><p className="text-white text-xl font-semibold mt-3">From crypto to zero in minutes</p><Button text="Get Started" styles='p-3 bg-white text-sky-500 rounded-md mt-5' /></div>
+			<div className="p-5 zero bg-darkBlue"><p className="text-white text-xl font-semibold mt-3">From crypto to zero in minutes</p><Button text="Get Started" styles='p-3 bg-white text-sky-600 rounded-md mt-5' /></div>
 		</section>
 
 	)
