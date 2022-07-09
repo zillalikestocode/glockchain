@@ -18,7 +18,7 @@ const PriceSlide = ({ coins}) => {
       className="mySwiper w-full">
         { coins.map((coin) => {
           return (
-            <SwiperSlide key={coin.id} className="">
+            <SwiperSlide key={coin.id} className="price">
               <Price coin={coin} key={coin.id}/>
             </SwiperSlide>
           )
