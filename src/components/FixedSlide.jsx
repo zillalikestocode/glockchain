@@ -8,7 +8,7 @@ import spin from '../images/spinningIcons.gif'
 const FixedSlide = () => {
 
 	return (
-		<div className="flex items-center fixed rounded-full bg-lightBlue w-16 h-16 bottom-3 right-3 cursor-pointer">
+		<div className=" z-10 flex items-center fixed rounded-full bg-lightBlue w-16 h-16 bottom-3 right-3 cursor-pointer">
 				<img src={spin} alt="" width="50px" className="mx-auto"/>
 		</div>
 	)

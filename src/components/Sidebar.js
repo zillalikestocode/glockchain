@@ -3,8 +3,24 @@ import { BiX  } from 'react-icons/bi'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function Sidebar({ sidebar, setSidebar, links }){
+	const side = {
+		initial: {
+			x: "100%"
+		},
+		animate: {
+			x: 0,
+			transition: {
+				type: "spring",
+				duration: 0.4,
+				bounce: 0
+			}
+		},
+		exit: {
+			x: "100%"
+		}
+	}
 	return (
-		<motion.div initial={{ x: 100}} animate={{ x: 0}} exit={{ x: 100}} transition={{ type: "spring", bounce: 0, duration: 0.4 }} className={`fixed top-0 bottom-0 left-0 bg-white w-full h-screen z-10`}>
+		<motion.div variants={side} initial="initial" animate="animate" exit="exit" className={`fixed top-0 bottom-0 left-0 bg-white w-full h-screen z-20`}>
 			<div className="flex items-center p-3 h-[4.75rem] bg-white border-b border-b-gray-200">
 				<div className="flex text-2xl font-bold"><h4>Glockchain<span className="font-bold text-gray-400">.com</span></h4></div>
 				<Button text={<BiX />} styles="text-4xl ml-auto p-2" onClick={() => { setSidebar(!sidebar)}}/>

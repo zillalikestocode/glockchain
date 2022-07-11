@@ -48,7 +48,7 @@ function App() {
         id:1 ,
 			  img: wallet1,
 			  info: "Buy and Sell Crypto in Minutes",
-			  extraInfo: 'Instantly buy Bicoin with credit card, debit card, or by linking your bank.'
+			  extraInfo: 'Instantly buy Bitcoin with credit card, debit card, or by linking your bank.'
 		  },{
         id: 2,
 			  img: wallet2,
@@ -198,18 +198,11 @@ function App() {
 
   return (
 	  <>
-    
-		  <AnimatePresence
-		  initial={false}
-		  exitBeforeStart={true}
-			  onExitComplete={() => null}>
         <Header links={navlinks} width={windowWidth} sidebar={sidebar} setSidebar={setSidebar}/>
-    { sidebar && <Sidebar sidebar={ sidebar } setSidebar={ setSidebar} links={navlinks}/>}
+    <AnimatePresence>{ sidebar && <Sidebar sidebar={ sidebar } setSidebar={ setSidebar} links={navlinks}/>}</AnimatePresence>
 
     <Body coins={coins} navlinks={navlinks} width={windowWidth}/>
-    <FixedSlide />
-		  </AnimatePresence>
-	  </>
+    <FixedSlide />	  </>
   );
 }
 
