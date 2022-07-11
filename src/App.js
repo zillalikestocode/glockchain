@@ -1,8 +1,9 @@
 import Header from './components/Header'
 import { AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Body from './components/Body'
+import FixedSlide from './components/FixedSlide.jsx'
 import Sidebar from './components/Sidebar'
 import btc from './images/prices-btc.svg'
 import eth from './images/prices-eth.svg'
@@ -42,6 +43,7 @@ function App() {
 		  btnText: 'Get started',
 		  bgImg: walletBg,
 		  theme: 'purple',
+      border: 'border-purple-300',
 		  details: [{
         id:1 ,
 			  img: wallet1,
@@ -81,6 +83,7 @@ function App() {
 		  btnText: 'Trade Now',
 		  bgImg: exchangeBg,
 		  theme: 'sky',
+      border: 'border-sky-300',
 		  details: [{
         id: 1,
 			  img: exchange1,
@@ -115,6 +118,7 @@ function App() {
   		  btnText: 'Explore Now',
   		  bgImg: exploreBg,
   		  theme: 'amber',
+        border: 'border-amber-300',
   		  details: [{
           id: 1,
   			  img: explore1,
@@ -190,16 +194,20 @@ function App() {
 		setWindowWidth(window.innerWidth)
 	})
 	const [sidebar, setSidebar] = useState(false)
+  
 
   return (
 	  <>
-    <Header links={navlinks} width={windowWidth} sidebar={sidebar} setSidebar={setSidebar}/>
-	  { sidebar && <Sidebar sidebar={ sidebar } setSidebar={ setSidebar} links={navlinks}/>}
-		<Body coins={coins} navlinks={navlinks}/>
+    
 		  <AnimatePresence
 		  initial={false}
 		  exitBeforeStart={true}
 			  onExitComplete={() => null}>
+        <Header links={navlinks} width={windowWidth} sidebar={sidebar} setSidebar={setSidebar}/>
+    { sidebar && <Sidebar sidebar={ sidebar } setSidebar={ setSidebar} links={navlinks}/>}
+
+    <Body coins={coins} navlinks={navlinks} width={windowWidth}/>
+    <FixedSlide />
 		  </AnimatePresence>
 	  </>
   );
